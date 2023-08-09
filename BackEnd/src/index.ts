@@ -4,6 +4,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 
 const app: Application = express();
+const PORT = process.env.PORT || 3000;
 
 //middleware
 app.use(express.json());
@@ -14,5 +15,5 @@ app.use(bodyParser.json());
 
 app.use(userRoutes);
 
-app.listen(3000);
+app.listen(PORT);
 console.log('Server running on Port 3000');
