@@ -61,7 +61,7 @@ const GitHubProfile = () => {
                 height: '100vh'
             }}
         >
-            <Typography variant="h4" component="h4" gutterBottom>
+            <Typography component="h4" variant="h4" gutterBottom>
                 GitHub Profile
             </Typography>
 
@@ -130,11 +130,15 @@ const GitHubProfile = () => {
                                     src={userData.user.avatar_url}
                                     alt={userData.user.login}
                                 />
-                                <Typography variant="h6">{userData.user.name}</Typography>
-                                <Typography>{userData.user.login}</Typography>
+                                <Typography component={'span'} variant="h6">
+                                    {userData.user.name}
+                                </Typography>
+                                <Typography component={'span'} variant="body2">
+                                    {userData.user.login}
+                                </Typography>
                             </>
                         )}
-                        <hr />
+
                         <div
                             style={{
                                 display: 'flex',
@@ -147,6 +151,8 @@ const GitHubProfile = () => {
                                         <CardContent>
                                             <Avatar src={org.avatar_url} alt={org.login} />
                                             <Typography
+                                                component={'span'}
+                                                variant="body2"
                                                 sx={{
                                                     fontSize: 10
                                                 }}
@@ -161,7 +167,7 @@ const GitHubProfile = () => {
                 </Grid>
 
                 {/* Right */}
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12} md={8} component="span">
                     <div
                         style={{
                             border: 'none',
@@ -201,14 +207,18 @@ const GitHubProfile = () => {
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                         >
-                                                            <Typography variant="body1">
+                                                            <Typography component={'span'} variant="body1">
                                                                 {gist.description}
                                                                 <span style={{ marginLeft: '10px' }}>
                                                                     {gist.files && Object.keys(gist.files)[0]}
                                                                 </span>
                                                             </Typography>
                                                         </a>
-                                                        <Typography variant="body2" color="textSecondary">
+                                                        <Typography
+                                                            component={'div'}
+                                                            variant="body2"
+                                                            color="textSecondary"
+                                                        >
                                                             {formatDateString(gist.created_at)}
                                                         </Typography>
                                                     </div>

@@ -8,7 +8,7 @@ const Navbar = () => {
         <AppBar position="fixed" elevation={0}>
             <Container>
                 <Toolbar>
-                    <Typography variant="h6" flexGrow={1}>
+                    <Typography component={'span'} variant="h6" flexGrow={1}>
                         <GitHubIcon />
                     </Typography>
                     <Button variant="text" color="inherit" startIcon={<LoginIcon />}>
