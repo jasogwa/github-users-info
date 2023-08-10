@@ -13,9 +13,7 @@ import {
     ListItemAvatar,
     ListItemText
 } from '@mui/material';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
-import 'toastr/build/toastr.min.css';
 import { useState } from 'react';
 
 const GitHubProfile = () => {
@@ -100,7 +98,7 @@ const GitHubProfile = () => {
                 Search
             </Button>
 
-            {isLoading && <CircularProgress />}
+            {isLoading && <p>Loading...</p>}
 
             <Grid container spacing={5}>
                 {/* Left */}
