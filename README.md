@@ -5,7 +5,7 @@
 * Install and configure docker on your machine
 * At the root folder run `docker-compose up`
 
-## Install without docker
+# Install without docker
 
 * Recommended node version: 16.17.0
 
@@ -24,3 +24,16 @@
 # Run
 
 *   ``Open : http://localhost:8000/  on your browser``
+
+# Testing
+
+## FrontEnd testing
+
+*   ``cd FrontEnd``
+*   ``npm run test``
+
+## BackEnd testing
+
+*   ``cd BackEnd``
+*   ``npm run dev``
+*   ``npm run test``
